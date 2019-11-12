@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import NotePageNav from './NotePageNav'
 
-describe(`NotePageNav component`, () => {
+describe.skip(`NotePageNav component`, () => {
   it('renders a .NotePageNav by default', () => {
     const wrapper = shallow(<NotePageNav />)
     expect(toJson(wrapper)).toMatchSnapshot()

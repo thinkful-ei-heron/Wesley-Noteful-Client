@@ -11,12 +11,12 @@ describe(`CircleButton component`, () => {
     'data-other': 'test-other-prop'
   }
 
-  it('renders a button.CircleButton by default', () => {
+  it.skip('renders a button.CircleButton by default', () => {
     const wrapper = shallow(<CircleButton />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
-  it('renders the circle button from props', () => {
+  it.skip('renders the circle button from props', () => {
     const wrapper = shallow(<CircleButton {...props} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })

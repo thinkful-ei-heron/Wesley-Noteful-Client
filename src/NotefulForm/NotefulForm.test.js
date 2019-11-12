@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import NotefulForm from './NotefulForm'
 
-describe(`NotefulForm component`, () => {
+describe.skip(`NotefulForm component`, () => {
   const props = {
     className: 'test-class-name',
     children: <p>test children</p>,
