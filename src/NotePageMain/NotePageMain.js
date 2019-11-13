@@ -1,7 +1,7 @@
 import React from 'react'
 import Note from '../Note/Note'
 import ApiContext from '../ApiContext'
-import { findNote } from '../notes-helpers'
+import { findNote, countNotesForFolder } from '../notes-helpers'
 import './NotePageMain.css'
 
 export default class NotePageMain extends React.Component {
@@ -17,15 +17,15 @@ export default class NotePageMain extends React.Component {
   }
 
   render() {
-    const { notes=[] } = this.context
-    const { noteId } = this.props.match.params
-    const note = findNote(notes, noteId) || { content: '' }
+    const { notes } = this.context;
+    const { note_id } = this.props.match.params;
+    const note = findNote(notes, note_id) || {content: ''};
     return (
       <section className='NotePageMain'>
         <Note
           id={note.id}
           name={note.name}
-          modified={note.modified}
+          modified={note.date_added}
           onDeleteNote={this.handleDeleteNote}
         />
         <div className='NotePageMain__content'>
